@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		A5B58C6A22DBC63300060CD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B58C6922DBC63300060CD6 /* AppDelegate.swift */; };
-		A5B58C6C22DBC63300060CD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B58C6B22DBC63300060CD6 /* ViewController.swift */; };
 		A5B58C6F22DBC63300060CD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B58C6D22DBC63300060CD6 /* Main.storyboard */; };
 		A5B58C7122DBC63300060CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B58C7022DBC63300060CD6 /* Assets.xcassets */; };
 		A5B58C7422DBC63300060CD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B58C7222DBC63300060CD6 /* LaunchScreen.storyboard */; };
+		A5B58C7F22DE653000060CD6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B58C7E22DE653000060CD6 /* ProfileViewController.swift */; };
+		A5B58C8122DE653B00060CD6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B58C8022DE653B00060CD6 /* MapViewController.swift */; };
+		A5B58C8322DE654700060CD6 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B58C8222DE654700060CD6 /* ScheduleViewController.swift */; };
+		A5B58C8522DE6BD500060CD6 /* ScheduleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B58C8422DE6BD500060CD6 /* ScheduleContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5B58C6622DBC63300060CD6 /* SpartahackVI-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpartahackVI-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B58C6922DBC63300060CD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5B58C6B22DBC63300060CD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A5B58C6E22DBC63300060CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5B58C7022DBC63300060CD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5B58C7322DBC63300060CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5B58C7522DBC63300060CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5B58C7E22DE653000060CD6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A5B58C8022DE653B00060CD6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A5B58C8222DE654700060CD6 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		A5B58C8422DE6BD500060CD6 /* ScheduleContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,41 @@
 		A5B58C6822DBC63300060CD6 /* SpartahackVI-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A5B58C7D22DE651700060CD6 /* Profile */,
+				A5B58C7C22DE64CC00060CD6 /* Map */,
+				A5B58C7B22DE64C200060CD6 /* Schedule */,
 				A5B58C6922DBC63300060CD6 /* AppDelegate.swift */,
-				A5B58C6B22DBC63300060CD6 /* ViewController.swift */,
 				A5B58C6D22DBC63300060CD6 /* Main.storyboard */,
 				A5B58C7022DBC63300060CD6 /* Assets.xcassets */,
 				A5B58C7222DBC63300060CD6 /* LaunchScreen.storyboard */,
 				A5B58C7522DBC63300060CD6 /* Info.plist */,
 			);
 			path = "SpartahackVI-iOS";
+			sourceTree = "<group>";
+		};
+		A5B58C7B22DE64C200060CD6 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				A5B58C8222DE654700060CD6 /* ScheduleViewController.swift */,
+				A5B58C8422DE6BD500060CD6 /* ScheduleContent.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		A5B58C7C22DE64CC00060CD6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				A5B58C8022DE653B00060CD6 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		A5B58C7D22DE651700060CD6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A5B58C7E22DE653000060CD6 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5B58C6C22DBC63300060CD6 /* ViewController.swift in Sources */,
+				A5B58C8322DE654700060CD6 /* ScheduleViewController.swift in Sources */,
+				A5B58C7F22DE653000060CD6 /* ProfileViewController.swift in Sources */,
 				A5B58C6A22DBC63300060CD6 /* AppDelegate.swift in Sources */,
+				A5B58C8522DE6BD500060CD6 /* ScheduleContent.swift in Sources */,
+				A5B58C8122DE653B00060CD6 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
