@@ -8,7 +8,13 @@
 
 import UIKit
 
-class ScheduleViewController: UIViewController {
+class ScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var countdownLabel: UILabel!
+    
+    var schedule:[Schedule]?
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +29,25 @@ class ScheduleViewController: UIViewController {
             do {
                 let events = try JSONDecoder().decode([Schedule].self, from: data)
                 
+                self.schedule = [Schedule]()
+                
                 for event in events {
-                    print(event.title)
+                    let description = event.description
+                    let id = event.id
+                    let location = event.location
+                    let time = event.time
+                    let title = event.title
+                    let updated_at = event.updated_at
+                    
+                    let item = Schedule(description: description, id: id, location: location, time: time, title: title, updated_at: updated_at)
+                    
+                    self.schedule?.append(item)
                 }
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+
             } catch let jsonError {
                 print("Found JSON Error:\(jsonError)")
             }
@@ -34,5 +56,21 @@ class ScheduleViewController: UIViewController {
                 print(err.localizedDescription)
             }
         }.resume()
+        
     }
+
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return schedule?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "scheduleCell")
+        
+        cell.textLabel?.text = schedule?[indexPath.item].title
+        cell.textLabel?.font = .systemFont(ofSize: 14, weight: UIFont.Weight.regular)
+        
+        return cell
+    }
+    
 }

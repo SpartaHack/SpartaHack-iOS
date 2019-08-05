@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53634A922F66BE1005623FD /* SpartaHackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53634A822F66BE1005623FD /* SpartaHackAPI.swift */; };
 		A5B58C6A22DBC63300060CD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B58C6922DBC63300060CD6 /* AppDelegate.swift */; };
 		A5B58C6F22DBC63300060CD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B58C6D22DBC63300060CD6 /* Main.storyboard */; };
 		A5B58C7122DBC63300060CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B58C7022DBC63300060CD6 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A53634A822F66BE1005623FD /* SpartaHackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaHackAPI.swift; sourceTree = "<group>"; };
 		A5B58C6622DBC63300060CD6 /* SpartahackVI-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpartahackVI-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B58C6922DBC63300060CD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5B58C6E22DBC63300060CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A53634A722F66BC1005623FD /* SpartaHackAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A53634A822F66BE1005623FD /* SpartaHackAPI.swift */,
+			);
+			path = SpartaHackAPI;
+			sourceTree = "<group>";
+		};
 		A5B58C5D22DBC63300060CD6 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		A5B58C6822DBC63300060CD6 /* SpartahackVI-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A53634A722F66BC1005623FD /* SpartaHackAPI */,
 				A5B58C7D22DE651700060CD6 /* Profile */,
 				A5B58C7C22DE64CC00060CD6 /* Map */,
 				A5B58C7B22DE64C200060CD6 /* Schedule */,
@@ -176,6 +187,7 @@
 			files = (
 				A5B58C8722DED90100060CD6 /* MapContent.swift in Sources */,
 				A5B58C8322DE654700060CD6 /* ScheduleViewController.swift in Sources */,
+				A53634A922F66BE1005623FD /* SpartaHackAPI.swift in Sources */,
 				A5B58C7F22DE653000060CD6 /* ProfileViewController.swift in Sources */,
 				A5B58C6A22DBC63300060CD6 /* AppDelegate.swift in Sources */,
 				A5B58C8522DE6BD500060CD6 /* ScheduleContent.swift in Sources */,

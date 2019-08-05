@@ -10,37 +10,109 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Map-->
         <scene sceneID="OXJ-SH-fVn">
             <objects>
                 <viewController id="Gdu-rC-8Yl" customClass="MapViewController" customModule="SpartahackVI_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8B8-xB-Ulq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="D10-kT-l4V"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="syv-Qs-HE0"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="syv-Qs-HE0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dF-SF-FWO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="854" y="-163"/>
         </scene>
-        <!--Item 1-->
+        <!--Schedule-->
         <scene sceneID="rPk-QW-Ymk">
             <objects>
                 <viewController id="qnv-Qx-FrB" customClass="ScheduleViewController" customModule="SpartahackVI_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XTX-f1-lRN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="fmf-eJ-JMj">
+                                <rect key="frame" x="20" y="64" width="374" height="724"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y3A-zO-xQQ">
+                                        <rect key="frame" x="82" y="0.0" width="210" height="54"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="S P A R T A H A C K   V I" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyC-yT-OMI">
+                                                <rect key="frame" x="0.0" y="0.0" width="210" height="24.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo2-sC-GLn">
+                                                <rect key="frame" x="67.5" y="32.5" width="75" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rVL-FK-gSu">
+                                        <rect key="frame" x="55" y="99" width="264" height="85"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="H a c k i n g   E n d s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eU-Wz-3gg">
+                                                <rect key="frame" x="31.5" y="0.0" width="201" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="48 h 00 m 00 s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3Z-z2-CR8">
+                                                <rect key="frame" x="0.0" y="37" width="264" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tRO-U7-ISY">
+                                        <rect key="frame" x="0.0" y="229" width="374" height="495"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scheduleCell" id="6u0-sZ-7Le">
+                                                <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6u0-sZ-7Le" id="JOF-of-pb8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="qnv-Qx-FrB" id="TTf-El-oii"/>
+                                            <outlet property="delegate" destination="qnv-Qx-FrB" id="3My-v1-QZ0"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tRO-U7-ISY" firstAttribute="leading" secondItem="fmf-eJ-JMj" secondAttribute="leading" id="C95-uI-itJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fmf-eJ-JMj" firstAttribute="leading" secondItem="XTX-f1-lRN" secondAttribute="leadingMargin" id="7nJ-ey-iZ2"/>
+                            <constraint firstItem="fmf-eJ-JMj" firstAttribute="top" secondItem="98O-B7-CH1" secondAttribute="top" constant="20" id="aEK-gg-TCM"/>
+                            <constraint firstItem="fmf-eJ-JMj" firstAttribute="trailing" secondItem="XTX-f1-lRN" secondAttribute="trailingMargin" id="k7z-qL-Pkt"/>
+                            <constraint firstItem="98O-B7-CH1" firstAttribute="bottom" secondItem="fmf-eJ-JMj" secondAttribute="bottom" constant="25" id="v7G-SO-geJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="98O-B7-CH1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="cfy-GT-A96"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" id="cfy-GT-A96"/>
+                    <connections>
+                        <outlet property="countdownLabel" destination="z3Z-z2-CR8" id="Xsv-gN-d29"/>
+                        <outlet property="tableView" destination="tRO-U7-ISY" id="Qrp-dV-iWi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wao-lE-TF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="-844"/>
+            <point key="canvasLocation" x="853.62318840579712" y="-844.41964285714278"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qBe-SE-POV">
@@ -61,17 +133,17 @@
             </objects>
             <point key="canvasLocation" x="-149" y="-163"/>
         </scene>
-        <!--Item 3-->
+        <!--Profile-->
         <scene sceneID="THN-o7-HgP">
             <objects>
                 <viewController id="T0i-93-Via" customClass="ProfileViewController" customModule="SpartahackVI_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s13-s4-O8c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MWj-Fp-bPV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 3" id="kGC-y6-cA0"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="kGC-y6-cA0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IcK-Eq-cFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
