@@ -71,9 +71,13 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         
         let event = schedule?[indexPath.item].title
         let timeOf = formatTime(scheduledTime: (schedule?[indexPath.item].time)!)
-        cell.textLabel?.text = "\(timeOf) - \(event ?? "(-_-)")"
+        let room = schedule?[indexPath.item].location
+        
+        cell.textLabel?.text = "\(timeOf) - \(event ?? ""), \(room ?? "")"
+        
         cell.textLabel?.font = .systemFont(ofSize: 14, weight: UIFont.Weight.medium)
         cell.selectionStyle = .none
+        cell.textLabel?.numberOfLines = 0
         return cell
     }
     
