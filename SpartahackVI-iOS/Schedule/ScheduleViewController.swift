@@ -72,7 +72,7 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         let event = schedule?[indexPath.item].title
         let timeOf = formatTime(scheduledTime: (schedule?[indexPath.item].time)!)
         cell.textLabel?.text = "\(timeOf) - \(event ?? "(-_-)")"
-        cell.textLabel?.font = .systemFont(ofSize: 14, weight: UIFont.Weight.regular)
+        cell.textLabel?.font = .systemFont(ofSize: 14, weight: UIFont.Weight.medium)
         cell.selectionStyle = .none
         return cell
     }
@@ -105,9 +105,9 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         
         // here we set the due date. When the timer is supposed to finish
         let competitionDate = NSDateComponents()
-        competitionDate.year = 2019
-        competitionDate.month = 8
-        competitionDate.day = 7
+        competitionDate.year = 2020
+        competitionDate.month = 1
+        competitionDate.day = 23
         competitionDate.hour = 00
         competitionDate.minute = 00
         competitionDate.second = 00
