@@ -67,19 +67,32 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "scheduleCell")
+        let cell = UITableViewCell(style: .value2, reuseIdentifier: "scheduleCell")
         
         let event = schedule?[indexPath.item].title
         let timeOf = formatTime(scheduledTime: (schedule?[indexPath.item].time)!)
         let room = schedule?[indexPath.item].location
         
-        cell.textLabel?.text = "\(timeOf) - \(event ?? ""), \(room ?? "")"
+        cell.detailTextLabel?.text = "\(event ?? "")"
         
-        cell.textLabel?.font = .systemFont(ofSize: 14, weight: UIFont.Weight.medium)
+        cell.detailTextLabel?.font = .systemFont(ofSize: 14, weight: UIFont.Weight.medium)
         cell.selectionStyle = .none
+        cell.detailTextLabel?.numberOfLines = 0
+        
+        cell.textLabel?.text = "\(timeOf)\n\(room ?? "")"
+        cell.textLabel?.font = .systemFont(ofSize: 14, weight: UIFont.Weight.medium)
+        cell.textLabel?.textColor = UIColor.gray
         cell.textLabel?.numberOfLines = 0
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
+        return 75
+        
+    }
+
     
     func formatTime(scheduledTime: String) -> String {
         
@@ -122,13 +135,13 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         
         
         //finally, here we set the variable to our remaining time
-        let daysLeft = CompetitionDayDifference.day
-        let hoursLeft = CompetitionDayDifference.hour
-        let minutesLeft = CompetitionDayDifference.minute
-        let secondsLeft = CompetitionDayDifference.second
+        let daysLeft = (CompetitionDayDifference.day! < 10 ? "0\(CompetitionDayDifference.day ?? 0)" : "\(CompetitionDayDifference.day ?? 0)")
+        let hoursLeft = (CompetitionDayDifference.hour! < 10 ? "0\(CompetitionDayDifference.hour ?? 0)" : "\(CompetitionDayDifference.hour ?? 0)")
+        let minutesLeft = (CompetitionDayDifference.minute! < 10 ? "0\(CompetitionDayDifference.minute ?? 0)" : "\(CompetitionDayDifference.minute ?? 0)")
+        let secondsLeft = (CompetitionDayDifference.second! < 10 ? "0\(CompetitionDayDifference.second ?? 0)" : "\(CompetitionDayDifference.second ?? 0)")
         
         //Set countdown label text
-        countdownLabel.text = "\(daysLeft ?? 0) : \(hoursLeft ?? 0) : \(minutesLeft ?? 0) : \(secondsLeft ?? 0)"
+        countdownLabel.text = "\(daysLeft) : \(hoursLeft) : \(minutesLeft) : \(secondsLeft)"
     }
     
     func runTimer() {
