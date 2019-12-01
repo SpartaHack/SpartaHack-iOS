@@ -50,6 +50,7 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
                 }
 
             } catch let jsonError {
+                print(response)
                 print("Found JSON Error:\(jsonError)")
             }
             
