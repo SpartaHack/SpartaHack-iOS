@@ -98,13 +98,17 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         
         let string = scheduledTime
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-        let date = dateFormatter.date(from: string)!
-        dateFormatter.dateFormat = "HH:mm"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        let date = formatter.date(from: string)!
+        formatter.dateFormat = "h:mm a"
+        formatter.amSymbol = "am"
+        formatter.pmSymbol = "pm"
+
         
-        let dateString = dateFormatter.string(from: date)
+        let dateString = formatter.string(from: date)
+
         return dateString
     }
     
@@ -123,8 +127,8 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         // here we set the due date. When the timer is supposed to finish
         let competitionDate = NSDateComponents()
         competitionDate.year = 2020
-        competitionDate.month = 1
-        competitionDate.day = 23
+        competitionDate.month = 2
+        competitionDate.day = 2
         competitionDate.hour = 00
         competitionDate.minute = 00
         competitionDate.second = 00
