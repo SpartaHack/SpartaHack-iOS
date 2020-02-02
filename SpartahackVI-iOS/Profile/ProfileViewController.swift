@@ -62,6 +62,9 @@ class ProfileViewController: UIViewController {
                         .start { result in
                             switch(result) {
                             case .success(let profile):
+                                print(profile.email)
+
+                                
                                 
 //                                if let name = profile.name {
 //                                  // Show Information
