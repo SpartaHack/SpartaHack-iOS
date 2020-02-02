@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Auth0
+
 
 class ProfileViewController: UIViewController {
 
@@ -16,19 +18,37 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var dietaryRestrictionsLabel: UILabel!
     
-    
-    let user = Profile(role: "Student", checked_in: true, first_name: "William", last_name: "Huynh", email: "huynhwi2@msu.edu", id: 43418793, dietary_restrictions: "nuts")
-    
+//    let user = Profile(role: "Student", checked_in: true, first_name: "William", last_name: "Huynh", email: "huynhwi2@msu.edu", id: 43418793, dietary_restrictions: "nuts")
+//
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadData()
+        // HomeViewController.swift
         
+//        loadData()
     }
     
-    func loadData() {
-        usernameLabel.text = user.first_name
-        roleLabel.text = user.role
-        dietaryRestrictionsLabel.text = user.dietary_restrictions
+//    func loadData() {
+//        usernameLabel.text = user.first_name
+//        roleLabel.text = user.role
+//        dietaryRestrictionsLabel.text = user.dietary_restrictions
+//    }
+    
+    @IBAction func loginButton(_ sender: Any) {
+        Auth0
+            .webAuth()
+            .scope("openid profile")
+            .audience("https://spartahack-dev.auth0.com/userinfo")
+            .start {
+                switch $0 {
+                case .failure(let error):
+                    // Handle the error
+                    print("Error: \(error)")
+                case .success(let credentials):
+                    // Do something with credentials e.g.: save them.
+                    // Auth0 will automatically dismiss the login page
+                    print("Credentials: \(credentials)")
+                }
+        }
     }
 }

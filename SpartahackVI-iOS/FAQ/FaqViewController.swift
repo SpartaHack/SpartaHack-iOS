@@ -31,20 +31,20 @@ class FaqViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 
                 for faq in faqs {
                     if faq.display == true {
-                    let answer = faq.answer
-                    let display = faq.display
-                    let id = faq.id
-                    let placement = faq.placement
-                    let priority = faq.priority
-                    let question = faq.question
-                    
-                    let item = Faq(answer: answer, display: display, id: id, placement: placement, priority: priority, question: question)
-                    
-                    self.allFaqs?.append(item)
+                        let answer = faq.answer
+                        let display = faq.display
+                        let id = faq.id
+                        let placement = faq.placement
+                        let priority = faq.priority
+                        let question = faq.question
+                        
+                        let item = Faq(answer: answer, display: display, id: id, placement: placement, priority: priority, question: question)
+                        
+                        self.allFaqs?.append(item)
                     }
                 }
                 
-//                print(self.allFaqs!)
+
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }

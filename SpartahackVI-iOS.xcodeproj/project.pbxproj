@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		664BF325D29A0833A36F3B99 /* Pods_SpartahackVI_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B6BCC103BCBC0F6BFB8C9AD /* Pods_SpartahackVI_iOS.framework */; };
 		A53634A922F66BE1005623FD /* SpartaHackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53634A822F66BE1005623FD /* SpartaHackAPI.swift */; };
 		A568E0B222FBBE380098A1A2 /* FaqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A568E0B122FBBE380098A1A2 /* FaqViewController.swift */; };
 		A568E0B422FBBE490098A1A2 /* FaqContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A568E0B322FBBE490098A1A2 /* FaqContent.swift */; };
@@ -20,9 +21,11 @@
 		A5B58C8522DE6BD500060CD6 /* ScheduleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B58C8422DE6BD500060CD6 /* ScheduleContent.swift */; };
 		A5B58C8722DED90100060CD6 /* MapContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B58C8622DED90100060CD6 /* MapContent.swift */; };
 		A5B58C8922DED90F00060CD6 /* ProfileContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B58C8822DED90F00060CD6 /* ProfileContent.swift */; };
+		A5ECB3C023E29BF600360FD5 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5ECB3BF23E29BF600360FD5 /* Auth0.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B6BCC103BCBC0F6BFB8C9AD /* Pods_SpartahackVI_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartahackVI_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53634A822F66BE1005623FD /* SpartaHackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaHackAPI.swift; sourceTree = "<group>"; };
 		A568E0B122FBBE380098A1A2 /* FaqViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqViewController.swift; sourceTree = "<group>"; };
 		A568E0B322FBBE490098A1A2 /* FaqContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqContent.swift; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		A5B58C8422DE6BD500060CD6 /* ScheduleContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleContent.swift; sourceTree = "<group>"; };
 		A5B58C8622DED90100060CD6 /* MapContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContent.swift; sourceTree = "<group>"; };
 		A5B58C8822DED90F00060CD6 /* ProfileContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContent.swift; sourceTree = "<group>"; };
+		A5ECB3BF23E29BF600360FD5 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		CB80C2B0CC15FD45F855CF86 /* Pods-SpartahackVI-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartahackVI-iOS.release.xcconfig"; path = "Target Support Files/Pods-SpartahackVI-iOS/Pods-SpartahackVI-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		EA44B05C041A7F936ACA9647 /* Pods-SpartahackVI-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartahackVI-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SpartahackVI-iOS/Pods-SpartahackVI-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,12 +51,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				664BF325D29A0833A36F3B99 /* Pods_SpartahackVI_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84A682C7874F1EEA5E891CC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA44B05C041A7F936ACA9647 /* Pods-SpartahackVI-iOS.debug.xcconfig */,
+				CB80C2B0CC15FD45F855CF86 /* Pods-SpartahackVI-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A53634A722F66BC1005623FD /* SpartaHackAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +89,8 @@
 			children = (
 				A5B58C6822DBC63300060CD6 /* SpartahackVI-iOS */,
 				A5B58C6722DBC63300060CD6 /* Products */,
+				84A682C7874F1EEA5E891CC8 /* Pods */,
+				C7BD5B84007AE676033AD588 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +115,7 @@
 				A5B58C7022DBC63300060CD6 /* Assets.xcassets */,
 				A5B58C7222DBC63300060CD6 /* LaunchScreen.storyboard */,
 				A5B58C7522DBC63300060CD6 /* Info.plist */,
+				A5ECB3BF23E29BF600360FD5 /* Auth0.plist */,
 			);
 			path = "SpartahackVI-iOS";
 			sourceTree = "<group>";
@@ -128,6 +147,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		C7BD5B84007AE676033AD588 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B6BCC103BCBC0F6BFB8C9AD /* Pods_SpartahackVI_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5B58C7822DBC63300060CD6 /* Build configuration list for PBXNativeTarget "SpartahackVI-iOS" */;
 			buildPhases = (
+				7F247798780638106A014D13 /* [CP] Check Pods Manifest.lock */,
 				A5B58C6222DBC63300060CD6 /* Sources */,
 				A5B58C6322DBC63300060CD6 /* Frameworks */,
 				A5B58C6422DBC63300060CD6 /* Resources */,
+				E56DF2FB9AE12A9E41427DAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,10 +218,53 @@
 				A5B58C7422DBC63300060CD6 /* LaunchScreen.storyboard in Resources */,
 				A5B58C7122DBC63300060CD6 /* Assets.xcassets in Resources */,
 				A5B58C6F22DBC63300060CD6 /* Main.storyboard in Resources */,
+				A5ECB3C023E29BF600360FD5 /* Auth0.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F247798780638106A014D13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpartahackVI-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E56DF2FB9AE12A9E41427DAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpartahackVI-iOS/Pods-SpartahackVI-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpartahackVI-iOS/Pods-SpartahackVI-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpartahackVI-iOS/Pods-SpartahackVI-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A5B58C6222DBC63300060CD6 /* Sources */ = {
@@ -352,6 +424,7 @@
 		};
 		A5B58C7922DBC63300060CD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA44B05C041A7F936ACA9647 /* Pods-SpartahackVI-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -361,7 +434,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "wi2.SpartahackVI-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spartahack.spartahackdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -370,6 +443,7 @@
 		};
 		A5B58C7A22DBC63300060CD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB80C2B0CC15FD45F855CF86 /* Pods-SpartahackVI-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,7 +453,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "wi2.SpartahackVI-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spartahack.spartahackdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
