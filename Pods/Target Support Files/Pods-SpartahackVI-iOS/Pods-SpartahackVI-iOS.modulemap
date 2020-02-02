@@ -1,0 +1,6 @@
+framework module Pods_SpartahackVI_iOS {
+  umbrella header "Pods-SpartahackVI-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

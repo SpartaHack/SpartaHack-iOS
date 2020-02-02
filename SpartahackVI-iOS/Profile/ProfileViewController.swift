@@ -48,6 +48,33 @@ class ProfileViewController: UIViewController {
                     // Do something with credentials e.g.: save them.
                     // Auth0 will automatically dismiss the login page
                     print("Credentials: \(credentials)")
+
+                    // credentials = A returned credentials object from the credentials manager in the previous step.
+
+                    guard let accessToken = credentials.accessToken else {
+                        // Handle Error
+                        return
+                    }
+
+                    Auth0
+                        .authentication()
+                        .userInfo(withAccessToken: accessToken)
+                        .start { result in
+                            switch(result) {
+                            case .success(let profile):
+                                
+//                                if let name = profile.name {
+//                                  // Show Information
+//
+//                                }
+                                // You've got the user's profile, good time to store it locally.
+                                // e.g. self.profile = profile
+                            case .failure(let error):
+                                // Handle the error
+                                print("Error: \(error)")
+                            }
+                        }
+                    
                 }
         }
     }
