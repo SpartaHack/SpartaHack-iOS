@@ -62,7 +62,7 @@ class ProfileViewController: UIViewController {
                         .start { result in
                             switch(result) {
                             case .success(let profile):
-                                print(profile.email)
+                                print(profile.name)
 
                                 
                                 
